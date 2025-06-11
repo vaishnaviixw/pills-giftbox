@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For PILLS 🎁</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to top right, #ffe0f0, #d3f8ff);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, cursive;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .container {
+      text-align: center;
+      position: relative;
+    }
+    .gift-box {
+      width: 150px;
+      height: 150px;
+      background: #ffb6c1;
+      border-radius: 20px;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+      margin: 0 auto;
+      z-index: 2;
+    }
+    .gift-box:hover {
+      transform: scale(1.05);
+    }
+    .lid {
+      width: 160px;
+      height: 30px;
+      background: #ff69b4;
+      position: absolute;
+      top: -30px;
+      left: -5px;
+      border-radius: 15px;
+      z-index: 3;
+      transition: top 0.5s ease;
+    }
+    .ribbon-horizontal, .ribbon-vertical {
+      position: absolute;
+      background-color: #ff69b4;
+    }
+    .ribbon-horizontal {
+      width: 100%;
+      height: 10px;
+      top: 70px;
+      left: 0;
+    }
+    .ribbon-vertical {
+      width: 10px;
+      height: 100%;
+      top: 0;
+      left: 70px;
+    }
+    .message {
+      position: absolute;
+      bottom: 150px;
+      left: 50%;
+      transform: translateX(-50%) translateY(50px);
+      background-color: #fff0f5;
+      padding: 15px 20px;
+      border-radius: 15px;
+      font-size: 1.2em;
+      color: #444;
+      display: none;
+      opacity: 0;
+      animation: floatUp 1.5s ease forwards;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 4;
+    }
+    .cartoon {
+      display: none;
+      margin-top: 20px;
+      width: 300px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+    @keyframes floatUp {
+      0% { opacity: 0; transform: translateX(-50%) translateY(50px); }
+      100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="gift-box" onclick="openGift()">
+          <div class="lid" id="lid"></div>
+          <div class="ribbon-horizontal"></div>
+          <div class="ribbon-vertical"></div>
+        </div>
+        <div class="message" id="message">
+          Hey PILLS 💊,<br>
+          I MISS YOU!<br>
+          Jaldi aa jaao,mainu ab raha ni jaata<br>
+        </div>
+        <img src="c:\Users\hp\OneDrive\Pictures\WhatsApp Image 2025-06-11 at 11.15.13_35214c2e.jpg" class="cartoon" id="cartoon" alt="Cute cartoon">
+        <audio id="bg-music" src="c:\Users\hp\Music\WhatsApp Video 2025-06-11 at 11.14.18_36ca7af1.mp4" preload="auto"></audio>
+      </div>  <script>
+ function openGift() {
+      document.getElementById('lid').style.top = '-80px';
+      const message = document.getElementById('message');
+      const cartoon = document.getElementById('cartoon');
+      message.style.display = 'block';
+      cartoon.style.display = 'block';
+      setTimeout(() => {
+        message.style.opacity = 1;
+        cartoon.style.opacity = 1;
+      }, 100);
+      document.getElementById('bg-music').play();
+    }
+  </script></body>
+</html>    
