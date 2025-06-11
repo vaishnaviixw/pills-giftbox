@@ -125,7 +125,10 @@
       cartoon.style.opacity = 1;
     }, 100);
 
-    document.getElementById("bg-music").play();
+    const audio = document.getElementById("bg-music");
+    audio.play().catch((error) => {
+      console.log("Audio play error:", error);
+    });
   });
 </script>
 </body>
